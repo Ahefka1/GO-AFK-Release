@@ -72,7 +72,10 @@ Les détails par version sont dans **[CHANGELOG.md](CHANGELOG.md)**.
    - **Description** : copier la section correspondante du **CHANGELOG.md**
    - Joindre l’artefact issu de  
      `dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true`
-4. (Optionnel, plus tard) Fichier `version.json` hébergé ou API GitHub pour **mise à jour automatique** dans l’app.
+4. **Mise à jour automatique dans l’application** : joignez à la release au minimum :
+   - **`GO-AFK.exe`** — binaire publié ;
+   - **`update.json`** — manifeste (voir `release_update.example.json`) : `version`, `sha256` de **ce** `GO-AFK.exe` (64 hex minuscules), `notes` (Markdown ou texte **cumulatif**).
+   Les utilisateurs n’ont **pas** besoin de fichier JSON à côté de l’exe : le dépôt GitHub est **embarqué** dans l’application. Un fichier optionnel `update_sources.json` ne sert qu’à surcharger owner/repo (fork / test).
 
 ---
 

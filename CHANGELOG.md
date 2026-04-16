@@ -16,11 +16,20 @@ Première release publique.
 - **winget** : résolution du binaire **`winget.exe`**, **`--scope machine`** lorsque applicable, fenêtres pour recherche, désinstallation, historique et winget.run.
 - **Modules** : tableau de bord, réseau, nettoyage, réparation (dont AdwCleaner si présent dans `tools\`), disques & pilotes, logiciels, sauvegarde profil, performances, sécurité, diagnostic système (filtres OK / Warn / Error, détail formaté, recontrôle par section — parties du module en **WIP**), post-install, informations système, export journal.
 
+### Mises à jour & publication
+
+- **Mise à jour depuis l’application** : vérification au démarrage via l’API GitHub Releases (`Ahefka1` / `GO-AFK-Release` embarqués — distribution **exe seul**, sans JSON obligatoire à côté du binaire).
+- **Assets release** : `GO-AFK.exe` + **`update.json`** (`version`, `sha256` du exe publié, `notes` cumulatives). Modèle : `release_update.example.json`.
+- **Remplacement** : téléchargement, contrôle SHA256, script PowerShell puis redémarrage ; fenêtres sombres (disponible / notes).
+- **Notes de version** : lien **Détail de version** dans le pied de page ; changelog **embarqué** dans l’exe tant qu’aucune note distante n’est en cache ; après mise à jour, affichage des notes issues de `update.json`.
+- **Robustesse** : absence de release GitHub (HTTP 404) gérée sans erreur bloquante dans le journal.
+
 ### Technique
 
-- Cible : **.NET 8**, **Windows** (`net8.0-windows`), WPF.
+- Cible : **.NET 8**, **Windows** (`net8.0-windows`), WPF ; version affichée **1.0.0** (pied de page dynamique depuis l’assembly).
 - Manifeste application : exécution **avec élévation** (`requireAdministrator`) pour les opérations système — invite UAC possible au lancement.
 - Outils tiers optionnels : répertoire `tools\` (SDIO, CrystalDiskInfo portable, smartctl, AdwCleaner, etc.) — à fournir avant distribution si vous les embarquez.
+- Fichier embarqué `Resources/EmbeddedChangelog.md` dans le projet source (à tenir aligné avec ce CHANGELOG lors des prochaines releases).
 
 ---
 
