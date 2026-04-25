@@ -67,8 +67,8 @@ Les détails par version sont dans **[CHANGELOG.md](CHANGELOG.md)**.
    `git remote add origin https://github.com/<compte>/GO-AFK-Release.git`
 2. Pousser la branche : `git push -u origin main`
 3. Dans **Releases** → **Create a new release** :
-   - **Tag** : `v1.1`
-   - **Titre** : ex. `GO-AFK 1.1`
+   - **Tag** : `v1.2.0`
+   - **Titre** : ex. `GO-AFK 1.2.0`
    - **Description** : copier la section correspondante du **CHANGELOG.md**
    - Joindre l’artefact issu de  
      `dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true`

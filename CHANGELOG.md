@@ -4,6 +4,24 @@ Historique des versions **GO-AFK** publiées sur ce dépôt.
 
 ---
 
+## [1.2.0] — 2026-04-25
+
+Correctif ciblé du système de mise à jour en ligne.
+
+### Correctifs
+
+- Flux d’update durci pour éviter les erreurs de thread UI pendant l’installation.
+- Fermeture de l’application effectuée via le dispatcher UI (thread-safe).
+- Script updater externe renforcé avec retries de copie avant relance, pour mieux gérer les verrous temporaires.
+- Plus de tentative de manipulation risquée du process courant pendant sa propre mise à jour.
+
+### Publication
+
+- Version affichée dans l’application : **1.2.0**.
+- Build release préparé en **single-file self-contained** (`GO-AFK.exe`).
+
+---
+
 ## [1.1] — 2026-04-25
 
 Mise à jour UI/diagnostic et préparation release.
