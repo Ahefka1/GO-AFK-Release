@@ -38,7 +38,7 @@ Application **bureau native** (WPF, **.NET 8**) :
 - **Sauvegarde** : profil utilisateur (robocopy), dossier de destination et nom personnalisables, contrôle d’espace.
 - **Performances** : suivi CPU / RAM, stress test, processus suspects, rapport batterie si portable.
 - **Sécurité** : pare-feu, Defender, TPM, BitLocker (actions directes), etc.
-- **Diagnostic système** : collecte large (infos matériel, thermiques, disques, réseau, DISM, activation, PUP, etc.) — évolution continue (**WIP** sur certaines parties de l’UI).
+- **Diagnostic système** : collecte large (infos matériel, thermiques, disques, réseau, DISM, activation, PUP, etc.), avec détail par section.
 - **Post Install** : séquence guidée (fuseau, icônes bureau, installations winget, associations par défaut, nettoyage), fenêtre dédiée en thème sombre.
 - **Journal** : traçabilité des actions, export possible.
 
@@ -67,8 +67,8 @@ Les détails par version sont dans **[CHANGELOG.md](CHANGELOG.md)**.
    `git remote add origin https://github.com/<compte>/GO-AFK-Release.git`
 2. Pousser la branche : `git push -u origin main`
 3. Dans **Releases** → **Create a new release** :
-   - **Tag** : `v1.0`
-   - **Titre** : ex. `GO-AFK 1.0`
+   - **Tag** : `v1.1`
+   - **Titre** : ex. `GO-AFK 1.1`
    - **Description** : copier la section correspondante du **CHANGELOG.md**
    - Joindre l’artefact issu de  
      `dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true`

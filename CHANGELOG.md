@@ -4,6 +4,29 @@ Historique des versions **GO-AFK** publiées sur ce dépôt.
 
 ---
 
+## [1.1] — 2026-04-25
+
+Mise à jour UI/diagnostic et préparation release.
+
+### Nouveautés et améliorations
+
+- Dashboard retravaillé : KPI GPU simplifié ajouté, KPI fuseau retiré, carte disque simplifiée (`utilisé/total` en valeurs only).
+- Tuiles dashboard harmonisées : descriptions unifiées, suppression des mentions `Section...` / `Onglet...`, retrait du badge `(WIP)` sur Diagnostic.
+- Panneau **Exécution** refondu : cartes compactes, détail brut en dropdown par action, meilleure lisibilité globale.
+- Statuts d’actions stabilisés : passage en `OK/ERREUR` plus cohérent (fin d’action, cas speedtest et SMART inclus).
+- Module réseau : sortie ping formatée proprement (encodage lisible en français).
+- Action rapide `Resync time` : popup dédiée au standard GO-AFK (dark, croix `✕`, sans bouton Fermer natif).
+- Processus suspects : popup complète avec scan manuel, détails process (PID/chemin/commande/signature), VirusTotal, Kill avec confirmation.
+- Diagnostic système : correction DISM (encodage + statut), et détail TPM enrichi avec version (aligné infos système).
+- Recherche universelle : aliases étendus + amélioration UI (cards/badges/empty state/chips raccourcis).
+
+### Publication
+
+- Version affichée dans l’application : **1.1**.
+- Build release préparé en **single-file self-contained** (`GO-AFK.exe`).
+
+---
+
 ## [1.0.0] — 2026-04-16
 
 Première release publique.
